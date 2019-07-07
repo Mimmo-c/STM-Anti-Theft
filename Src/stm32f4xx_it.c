@@ -291,7 +291,7 @@ void EXTI15_10_IRQHandler(void)
   HAL_RTC_GetTime(&hrtc, &sTime, RTC_FORMAT_BCD);       //Get RTC Time
   HAL_RTC_GetDate(&hrtc, &sDate, RTC_FORMAT_BCD);       //Get RTC Date
   
-  //Clear TIM1 Update Flag to avoid immediatlye calling IRQ handle function
+  //Clear TIM1 Update Flag to avoid immediatly calling IRQ handle function
   __HAL_TIM_CLEAR_FLAG(&htim1, TIM_FLAG_UPDATE);
   
   HAL_TIM_Base_Start_IT(&htim1);        //Start TIM1 in interrupt mode
